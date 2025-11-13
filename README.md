@@ -1,12 +1,74 @@
 # Assignment 1
+Description
+Using Lazada as a reference, this Node.js module simulates a basic order management system found in e-commerce platforms.
+It allows users to create, view, update, and delete orders, similar to features in Lazada’s order tracking system.
 
-You will only need one file, ie, your node module, for this assignment.
 
-In this readme file, describe how to use your node module. It could be similar to **app.js** from Lab2, where you call some functions in your node module and display the output. Describe how to setup your node module, if any. Describe how to call the functions, what parameters required and so on.
+Installation
+Just import or require the file into your Node.js project.
 
-You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live preview of the readme file.
+const orderController = require("./peiqi_EGL301.js");
 
-For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+Module Functions
+
+createOrder(orders, userId, items, totalAmount, paymentMethod)
+Return Type: Object
+
+Uses 5 parameters when creating a new order.
+orders: Array,
+userId: String,
+items: Array of objects ([{name, qty, price}]),
+totalAmount: Number,
+paymentMethod: String (default is "Credit Card")
+
+This function creates a new order and automatically generates a unique order ID (e.g., LZ001, LZ002).
+
+getOrderById(orders, orderId)
+Return Type: Object
+
+Uses 2 parameters when retrieving a specific order.
+orders: Array,
+orderId: String
+
+This function returns the details of a single order by its ID.
+
+getUserOrders(orders, userId)
+Return Type: Object
+
+Uses 2 parameters when getting all orders from a specific user.
+orders: Array,
+userId: String
+
+This function returns all orders made by a specific user.
+
+getAllOrders(orders)
+Return Type: Object
+
+Uses 1 parameter when retrieving all orders.
+orders: Array
+
+This function returns all existing orders (admin view).
+
+updateOrderStatus(orders, orderId, newStatus)
+Return Type: Object
+
+Uses 3 parameters when updating an order’s delivery status.
+orders: Array,
+orderId: String,
+newStatus: String
+
+Valid status options: "Processing", "Shipped", "Delivered", "Cancelled".
+
+deleteOrderById(orders, orderId)
+Return Type: Object
+
+Uses 2 parameters when deleting an order.
+orders: Array,
+orderId: String
+
+Deletes an existing order from the list using its order ID.
+
 
 # References
-Provide the references that you have used to support your assignment. 
+https://www.lazada.sg/#?
