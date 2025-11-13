@@ -1,5 +1,4 @@
-// app.js
-// Example usage of LazadaOrderController.js
+
 
 const orderController = require('./peiqi_lazada.js');
 
