@@ -4,15 +4,15 @@ Using Lazada as a reference, this Node.js module simulates a basic order managem
 It allows users to create, view, update, and delete orders, similar to features in Lazada’s order tracking system.
 
 
-Installation
+# Installation
 Just import or require the file into your Node.js project.
 
 const orderController = require("./peiqi_EGL301.js");
 
 
-Module Functions
+# Module Functions
 
-createOrder(orders, userId, items, totalAmount, paymentMethod)
+# createOrder(orders, userId, items, totalAmount, paymentMethod)
 Return Type: Object
 
 Uses 5 parameters when creating a new order.
@@ -24,7 +24,7 @@ paymentMethod: String (default is "Credit Card")
 
 This function creates a new order and automatically generates a unique order ID (e.g., LZ001, LZ002).
 
-getOrderById(orders, orderId)
+# getOrderById(orders, orderId)
 Return Type: Object
 
 Uses 2 parameters when retrieving a specific order.
@@ -33,7 +33,7 @@ orderId: String
 
 This function returns the details of a single order by its ID.
 
-getUserOrders(orders, userId)
+# getUserOrders(orders, userId)
 Return Type: Object
 
 Uses 2 parameters when getting all orders from a specific user.
@@ -42,7 +42,7 @@ userId: String
 
 This function returns all orders made by a specific user.
 
-getAllOrders(orders)
+# getAllOrders(orders)
 Return Type: Object
 
 Uses 1 parameter when retrieving all orders.
@@ -50,7 +50,7 @@ orders: Array
 
 This function returns all existing orders (admin view).
 
-updateOrderStatus(orders, orderId, newStatus)
+# updateOrderStatus(orders, orderId, newStatus)
 Return Type: Object
 
 Uses 3 parameters when updating an order’s delivery status.
@@ -60,7 +60,7 @@ newStatus: String
 
 Valid status options: "Processing", "Shipped", "Delivered", "Cancelled".
 
-deleteOrderById(orders, orderId)
+# deleteOrderById(orders, orderId)
 Return Type: Object
 
 Uses 2 parameters when deleting an order.
@@ -71,4 +71,5 @@ Deletes an existing order from the list using its order ID.
 
 
 # References
+
 https://www.lazada.sg/#?
