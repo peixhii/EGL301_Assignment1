@@ -1,7 +1,7 @@
 // app.js
 // Example usage of LazadaOrderController.js
 
-const orderController = require('./peiqi_EGL301.js');
+const orderController = require('./peiqi_lazada.js');
 
 // Simulated database (array)
 const orders = [];
@@ -47,3 +47,4 @@ console.log(orders);
 console.log("Get Order by ID (LZ003)");
 const order = orderController.getOrderById(orders, "LZ003");
 console.log(order);
+
